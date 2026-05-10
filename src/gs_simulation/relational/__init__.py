@@ -12,12 +12,20 @@ Modules:
     superiority     — Superiority analysis on relational matrix (§5.9) [pending]
 """
 
+from gs_simulation.relational.absolute import (
+    absolute_relational_degree,
+    trapezoidal_signed_area,
+    zero_starting_point_image,
+)
 from gs_simulation.relational.deng import (
     deng_relational_coefficient,
     deng_relational_degree,
 )
 
 __all__ = [
+    "absolute_relational_degree",
     "deng_relational_coefficient",
     "deng_relational_degree",
+    "trapezoidal_signed_area",
+    "zero_starting_point_image",
 ]
