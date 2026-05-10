@@ -62,12 +62,20 @@ def test_parallel_sequences_yield_unity() -> None:
 
 
 def test_dissimilar_shapes_have_lower_degree() -> None:
-    """An increasing-then-decreasing curve has lower ε with a monotonic one."""
-    monotonic = np.array([1.0, 2.0, 3.0, 4.0, 5.0])
-    triangle  = np.array([1.0, 3.0, 5.0, 3.0, 1.0])  # peak in the middle
-    eps_id = absolute_relational_degree(monotonic, monotonic)
-    eps_tri = absolute_relational_degree(monotonic, triangle)
-    assert eps_tri < eps_id
+    """Increasing vs. decreasing monotonic sequences have ε < 1.
+
+    Liu §5.4 ε is integrated (signed-area-based); two curves with the same
+    total signed area get ε = 1 even when their pointwise shapes differ.
+    Liu §5.6 similitude/closeness degrees address the local-shape gap.
+    To produce ε < 1 in this test we use two curves with different signed
+    areas (one increasing, one decreasing).
+    """
+    increasing = np.array([1.0, 2.0, 3.0, 4.0, 5.0])    # s_inc = +8
+    decreasing = np.array([5.0, 4.0, 3.0, 2.0, 1.0])    # s_dec = -8
+    eps_id = absolute_relational_degree(increasing, increasing)
+    eps_diff = absolute_relational_degree(increasing, decreasing)
+    assert eps_diff < eps_id
+    assert eps_diff < 0.6  # |s_inc − s_dec| = 16 dominates the denominator
 
 
 # ---------------------------------------------------------------------------
