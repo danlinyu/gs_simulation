@@ -17,15 +17,23 @@ from gs_simulation.relational.absolute import (
     trapezoidal_signed_area,
     zero_starting_point_image,
 )
+from gs_simulation.relational.closeness import closeness_relational_degree
 from gs_simulation.relational.deng import (
     deng_relational_coefficient,
     deng_relational_degree,
 )
+from gs_simulation.relational.relative import relative_relational_degree
+from gs_simulation.relational.similitude import similitude_relational_degree
+from gs_simulation.relational.synthetic import synthetic_relational_degree
 
 __all__ = [
     "absolute_relational_degree",
+    "closeness_relational_degree",
     "deng_relational_coefficient",
     "deng_relational_degree",
+    "relative_relational_degree",
+    "similitude_relational_degree",
+    "synthetic_relational_degree",
     "trapezoidal_signed_area",
     "zero_starting_point_image",
 ]
