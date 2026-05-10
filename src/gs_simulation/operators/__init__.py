@@ -9,6 +9,7 @@ Modules:
 Public API populated as Sprint 1 modules ship.
 """
 
+from gs_simulation.operators.accumulation import apply_ago, apply_iago
 from gs_simulation.operators.relational import (
     apply_d1_initialing,
     apply_d2_averaging,
@@ -16,7 +17,9 @@ from gs_simulation.operators.relational import (
 )
 
 __all__ = [
+    "apply_ago",
     "apply_d1_initialing",
     "apply_d2_averaging",
     "apply_d3_interval",
+    "apply_iago",
 ]
