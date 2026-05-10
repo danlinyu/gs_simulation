@@ -1,0 +1,50 @@
+gs_simulation
+=============
+
+This project provides original Python implementations of methods, models, and
+algorithms from the field of grey systems analysis. The code itself is licensed
+under the MIT License (see LICENSE).
+
+PRIMARY REFERENCE
+-----------------
+
+The methods implemented here follow the canonical exposition in:
+
+    Sifeng Liu (2024). Grey Systems Analysis: Methods, Models and Applications.
+    2nd Edition. Springer, Singapore.
+    ISBN 978-981-97-8726-5 (print) / 978-981-97-8727-2 (eBook)
+    DOI: https://doi.org/10.1007/978-981-97-8727-2
+    Open Access under Creative Commons Attribution-NonCommercial-NoDerivatives
+    4.0 International License (CC BY-NC-ND 4.0).
+
+Mathematical formulations of grey systems methods are not copyrightable
+(per Baker v. Selden, 101 U.S. 99, 1879, and 17 U.S.C. § 102(b)). The original
+exposition, prose, figures, and worked-example datasets in Liu (2024) remain
+under the book's CC BY-NC-ND 4.0 license. Code in this repository is original
+and does not reproduce book content.
+
+We attribute Liu (2024) as the source of method derivations used in the
+docstrings and tests. Each module's docstring identifies the relevant chapter
+and section. Worked-example test cases that use specific input values from the
+book are clearly labeled and cited; the inputs themselves are factual data
+arrangements not protected by copyright.
+
+ATTRIBUTION TO ANTECEDENTS
+--------------------------
+
+Grey system theory was founded by:
+
+    Julong Deng (1982). "Control problems of grey systems."
+    Systems & Control Letters, 1(5), 288-294.
+
+Subsequent foundational work includes contributions from Sifeng Liu, Yi Lin,
+Jeffrey Forrest, Yingjie Yang, Naiming Xie, Bo Zeng, and the broader grey
+systems research community across more than 130 countries.
+
+DISCLAIMER
+----------
+
+This software is provided "as is" with no warranty of correctness, fitness for
+purpose, or alignment with any specific edition of any reference text. Users
+should verify implementations against the canonical sources before relying on
+them for research, decision-making, or production use.
