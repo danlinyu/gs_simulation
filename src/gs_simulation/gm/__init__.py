@@ -18,13 +18,23 @@ from gs_simulation.gm.gm11 import (
     forecast_gm11,
     simulate_gm11,
 )
+from gs_simulation.gm.remnant import (
+    RemnantGMFit,
+    fit_remnant_gm11,
+    forecast_remnant_gm11,
+    simulate_remnant_gm11,
+)
 
 __all__ = [
     "GMFit",
+    "RemnantGMFit",
     "fit_dgm11",
     "fit_edgm11",
     "fit_egm11",
     "fit_odgm11",
+    "fit_remnant_gm11",
     "forecast_gm11",
+    "forecast_remnant_gm11",
     "simulate_gm11",
+    "simulate_remnant_gm11",
 ]
